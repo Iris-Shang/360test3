@@ -3,6 +3,7 @@ package view;
 import javafx.beans.binding.Bindings;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
@@ -29,10 +30,24 @@ public class MainController
 	
 	private CalcModel model;
 	
+
+
+    @FXML
+    private Button addb;
+
+    @FXML
+    private Button divideb;
+ 
+    @FXML
+    private Button multib;
+
+    @FXML
+    private Button subb;
+	
 	public void setModel(CalcModel model) 
 	{
 		this.model = model;
-		
+		 
 		
 		StringConverter<Number> converter = new NumberStringConverter();
 		Bindings.bindBidirectional(NumOneTF.textProperty(), model.getNum1(),converter);
@@ -66,7 +81,7 @@ public class MainController
 	@FXML
     void onDivideButton(ActionEvent event) 
 	{
-		model.multiply();
+		model.divide();;
     }
 
 	
