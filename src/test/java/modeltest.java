@@ -41,7 +41,7 @@ class modeltest
 		Operation ad = new Operation(num1.doubleValue(),"+",num2.doubleValue(),tm.getResult().doubleValue());
 		operations.add(ad);
 		assertEquals(numresult.doubleValue(),tm.getResult().doubleValue());
-		tm.divide();;
+		tm.divide();
 		numresult = new SimpleDoubleProperty(10.0);
 		Operation divi = new Operation(num1.doubleValue(),"/",num2.doubleValue(),tm.getResult().doubleValue());
 		operations.add(divi);
