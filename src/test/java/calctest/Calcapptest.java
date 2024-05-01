@@ -81,6 +81,10 @@ public class Calcapptest extends ApplicationTest {
     	robot.clickOn("#multib");
         Assertions.assertThat(robot.lookup("#ResultLabel")
         		.queryAs(Label.class)).hasText("160");
+    	robot.clickOn("#num1");
+    	robot.write("30");
+    	robot.clickOn("#num2");
+    	robot.write("3");
     	robot.clickOn("#divideb");
         Assertions.assertThat(robot.lookup("#ResultLabel")
         		.queryAs(Label.class)).hasText("10");
@@ -91,7 +95,7 @@ public class Calcapptest extends ApplicationTest {
     			new Operation(40,"+",4,44),
     			new Operation(40,"-",4,36),
     			new Operation(40,"*",4,160),
-    			new Operation(40,"/",4,10),
+    			new Operation(30,"/",3,10),
     			};
         Assertions.assertThat(ops).hasExactlyNumItems(check1.length);
     //  ObservableList<Operation> operations  = tm.getOperations();
