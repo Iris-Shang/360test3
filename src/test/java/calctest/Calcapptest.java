@@ -96,11 +96,11 @@ public class Calcapptest extends ApplicationTest {
         Assertions.assertThat(ops).hasExactlyNumItems(check1.length);
     //  ObservableList<Operation> operations  = tm.getOperations();
         //assertEquals(ops,operations);
-       /* for(Operation i: check1)
+        for(Operation i: check1)
         {
         	Assertions.assertThat(ops).hasListCell(i); 
           
-        }*/
+        }
     	
     }
 }

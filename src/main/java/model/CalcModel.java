@@ -20,25 +20,25 @@ public class CalcModel
 	public void add()
 	{
 		result.setValue(num1.doubleValue()+num2.doubleValue());
-		operations.add(new Operation(num1.doubleValue()," + ",num2.doubleValue(),result.doubleValue()));
+		operations.add(new Operation(num1.doubleValue(),"+",num2.doubleValue(),result.doubleValue()));
 	}
 	
 	public void subtract()
 	{
 		result.setValue(num1.doubleValue()-num2.doubleValue());
-		operations.add(new Operation(num1.doubleValue()," - ",num2.doubleValue(),result.doubleValue()));
+		operations.add(new Operation(num1.doubleValue(),"-",num2.doubleValue(),result.doubleValue()));
 	}
 
 	public void multiply()
 	{
 		result.setValue(num1.doubleValue()*num2.doubleValue());
-		operations.add(new Operation(num1.doubleValue()," * ",num2.doubleValue(),result.doubleValue()));
+		operations.add(new Operation(num1.doubleValue(),"*",num2.doubleValue(),result.doubleValue()));
 	}
 
 	public void divide()
 	{
 		result.setValue(num1.doubleValue()/num2.doubleValue());
-		operations.add(new Operation(num1.doubleValue()," / ",num2.doubleValue(),result.doubleValue()));
+		operations.add(new Operation(num1.doubleValue(),"/",num2.doubleValue(),result.doubleValue()));
 	}
 
 	public DoubleProperty getNum1()

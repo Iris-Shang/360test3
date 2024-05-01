@@ -38,22 +38,22 @@ class modeltest
 	{
 		tm.add();
 		DoubleProperty numresult = new SimpleDoubleProperty(44.0);
-		Operation ad = new Operation(num1.doubleValue()," + ",num2.doubleValue(),tm.getResult().doubleValue());
+		Operation ad = new Operation(num1.doubleValue(),"+",num2.doubleValue(),tm.getResult().doubleValue());
 		operations.add(ad);
 		assertEquals(numresult.doubleValue(),tm.getResult().doubleValue());
 		tm.divide();;
 		numresult = new SimpleDoubleProperty(10.0);
-		Operation divi = new Operation(num1.doubleValue()," / ",num2.doubleValue(),tm.getResult().doubleValue());
+		Operation divi = new Operation(num1.doubleValue(),"/",num2.doubleValue(),tm.getResult().doubleValue());
 		operations.add(divi);
 		assertEquals(numresult.doubleValue(),tm.getResult().doubleValue());
 		tm.multiply();
 		numresult = new SimpleDoubleProperty(160.0);
-		Operation mult = new Operation(num1.doubleValue()," * ",num2.doubleValue(),tm.getResult().doubleValue());
+		Operation mult = new Operation(num1.doubleValue(),"*",num2.doubleValue(),tm.getResult().doubleValue());
 		operations.add(mult);
 		assertEquals(numresult.doubleValue(),tm.getResult().doubleValue());
 		tm.subtract();
 		numresult = new SimpleDoubleProperty(36.0);
-		Operation sub = new Operation(num1.doubleValue()," - ",num2.doubleValue(),tm.getResult().doubleValue());
+		Operation sub = new Operation(num1.doubleValue(),"-",num2.doubleValue(),tm.getResult().doubleValue());
 		operations.add(sub);
 		assertEquals(numresult.doubleValue(),tm.getResult().doubleValue());
 		assertEquals(operations.toString(),tm.getOperations().toString());

@@ -38,9 +38,16 @@ public class Operation
 		if (getClass() != obj.getClass())
 			return false;
 		Operation other = (Operation) obj;
-		return Double.doubleToLongBits(num1) == Double.doubleToLongBits(other.num1)
-				&& Double.doubleToLongBits(num2) == Double.doubleToLongBits(other.num2) && Objects.equals(op, other.op)
-				&& Double.doubleToLongBits(result) == Double.doubleToLongBits(other.result);
+		return almostequal(num1,other.num1)
+				&& almostequal(num2,other.num2) && Objects.equals(op, other.op)
+				&& almostequal(result,other.result);
+	}
+	private boolean almostequal(double a, double b) 
+	{
+		double dif = a - b;
+		dif = Math.abs(dif);
+		if (dif < 0.00001) {return true;}
+		return false;
 	}
 	
 	
